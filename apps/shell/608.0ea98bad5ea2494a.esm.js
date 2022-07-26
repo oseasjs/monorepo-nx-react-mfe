@@ -94,7 +94,7 @@ const items = [{
   key: 'module1',
   label: (0,index_ts_.toUpperCase)('Module 1'),
   path: '/module1',
-  breadcrumbs: ['Menu', 'Module 111']
+  breadcrumbs: ['Menu', 'Module 1']
 }, {
   key: 'module2',
   label: (0,index_ts_.toUpperCase)('Module 2'),
@@ -161,7 +161,7 @@ const App = () => {
         children: /*#__PURE__*/(0,jsx_runtime.jsxs)(react_router_dom_index_js_.Routes, {
           children: [renderRoute(Object.assign({}, items[0], {
             path: '*',
-            breadcrumbs: ['Menu', 'Home']
+            breadcrumbs: ['Menu', 'Home Updated']
           })), /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: items.map(item => renderRoute(item))
           })]
