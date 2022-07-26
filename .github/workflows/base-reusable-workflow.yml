@@ -1,0 +1,50 @@
+name: Base Reusable Build
+
+# Reusing github actions workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+on:
+  workflow_call:
+    inputs:
+      ui_module:
+        required: true
+        type: string
+      nx_configuration:
+        required: true
+        type: string
+
+jobs:
+  build-ui:
+    name: Build
+    runs-on: ubuntu-latest
+    outputs:
+      tag: '${{ env.TAG }}'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install NX
+        uses: nrwl/nx-set-shas@v2
+
+      - name: Cache Deps
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ inputs.ui_module }}-${{ inputs.nx_configuration }}-build-ui-${{ hashFiles('./yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Format
+        run: yarn nx format:check ${{ inputs.ui_module }}
+
+      - name: Module Lint
+        run: yarn nx lint ${{ inputs.ui_module }}
+
+      - name: Build
+        run: yarn nx build ${{ inputs.ui_module }} --configuration=${{ inputs.nx_configuration }} --skip-nx-cache
+
+      - name: Generate version TAG
+        run: echo "TAG=$(git show -s --format=%cd --date=format:%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
+  
