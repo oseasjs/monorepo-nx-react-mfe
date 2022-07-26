@@ -22,7 +22,7 @@ const items: IMenuItem[] = [
     key: 'module1',
     label: toUpperCase('Module 1'),
     path: '/module1',
-    breadcrumbs: ['Menu', 'Module 111'],
+    breadcrumbs: ['Menu', 'Module 1'],
   },
   {
     key: 'module2',
@@ -93,7 +93,7 @@ const App: React.FC = () => {
             {renderRoute({
               ...items[0],
               path: '*',
-              breadcrumbs: ['Menu', 'Home'],
+              breadcrumbs: ['Menu', 'Home Updated'],
             })}
             <>{items.map((item) => renderRoute(item))}</>
           </Routes>

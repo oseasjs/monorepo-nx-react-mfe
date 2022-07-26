@@ -52,7 +52,6 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-          
 
       # - name: Generate version TAG
       #   run: echo "TAG=$(git show -s --format=%cd --date=format:%Y%m%d%H%M%S)" >> $GITHUB_ENV

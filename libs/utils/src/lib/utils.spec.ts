@@ -1,7 +1,7 @@
-import { toUpper } from './utils';
+import { toUpperCase } from './utils';
 
 describe('utils', () => {
   it('should work', () => {
-    expect(toUpper('test')).toEqual('TEST');
+    expect(toUpperCase('test')).toEqual('TEST');
   });
 });

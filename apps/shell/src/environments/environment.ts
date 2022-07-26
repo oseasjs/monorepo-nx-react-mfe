@@ -4,9 +4,8 @@
 export const environment = {
   env: 'local',
   remotes: {
-    'header': 'http://localhost:8081',
+    header: 'http://localhost:8081',
     'react-module-1': 'http://localhost:8082',
     'react-module-2': 'http://localhost:8083',
   } as Record<string, string>,
 };
-
