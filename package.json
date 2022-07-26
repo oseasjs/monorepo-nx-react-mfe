@@ -7,7 +7,7 @@
     "prebuild": "rimraf dist",
     "build": "nx build",
     "test": "nx test",
-    "predeploy": "nx build --configuration=qa",
+    "predeploy": "rimraf dist && nx run-many --target=build --all --configuration=qa",
     "deploy": "gh-pages -d dist"
   },
   "private": true,

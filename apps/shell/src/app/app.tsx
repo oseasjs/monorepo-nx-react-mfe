@@ -22,7 +22,7 @@ const items: IMenuItem[] = [
     key: 'module1',
     label: toUpperCase('Module 1'),
     path: '/module1',
-    breadcrumbs: ['Menu', 'Module 1'],
+    breadcrumbs: ['Menu', 'Module 111'],
   },
   {
     key: 'module2',

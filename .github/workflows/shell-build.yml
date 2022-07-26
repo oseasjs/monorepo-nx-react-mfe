@@ -31,7 +31,6 @@ jobs:
           else
             echo "NX_CONFIGURATION=qa" >> $GITHUB_ENV 
           fi
-
   build:
     name: Shell UI
     needs: ['set-env-vars']

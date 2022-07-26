@@ -11,6 +11,9 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write
+
 jobs:
   build-ui:
     name: Build
@@ -44,7 +47,12 @@ jobs:
       - name: Build
         run: yarn nx build ${{ inputs.ui_module }} --configuration=${{ inputs.nx_configuration }} --skip-nx-cache
 
-      - name: Generate version TAG
-        run: echo "TAG=$(git show -s --format=%cd --date=format:%Y%m%d%H%M%S)" >> $GITHUB_ENV
+      - name: Force push to destination branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+
+      # - name: Generate version TAG
+      #   run: echo "TAG=$(git show -s --format=%cd --date=format:%Y%m%d%H%M%S)" >> $GITHUB_ENV
 
   

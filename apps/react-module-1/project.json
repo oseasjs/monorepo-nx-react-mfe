@@ -37,9 +37,9 @@
               "with": "apps/react-module-1/src/environments/environment.prod.ts"
             }
           ],
-          "baseHref": "/react-module-1",
+          "baseHref": "/monorepo-nx-react-mfe/apps/react-module-1",
           "optimization": true,
-          "outputHashing": "all",
+          "outputHashing": "none",
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
@@ -54,7 +54,7 @@
           ],
           "baseHref": "/react-module-1",
           "optimization": true,
-          "outputHashing": "all",
+          "outputHashing": "none",
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,

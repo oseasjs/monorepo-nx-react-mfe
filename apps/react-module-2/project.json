@@ -37,9 +37,9 @@
               "with": "apps/react-module-2/src/environments/environment.qa.ts"
             }
           ],
-          "baseHref": "/react-module-2",
+          "baseHref": "/monorepo-nx-react-mfe/apps/react-module-2",
           "optimization": true,
-          "outputHashing": "all",
+          "outputHashing": "none",
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
@@ -54,7 +54,7 @@
           ],
           "baseHref": "/react-module-2",
           "optimization": true,
-          "outputHashing": "all",
+          "outputHashing": "none",
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
