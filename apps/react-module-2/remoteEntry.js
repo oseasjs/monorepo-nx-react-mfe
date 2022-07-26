@@ -5,7 +5,7 @@
 
 var moduleMap = {
 	"./Module": () => {
-		return Promise.all([__webpack_require__.e(619), __webpack_require__.e(266), __webpack_require__.e(223)]).then(() => (() => ((__webpack_require__(1223)))));
+		return Promise.all([__webpack_require__.e(619), __webpack_require__.e(311), __webpack_require__.e(618)]).then(() => (() => ((__webpack_require__(5618)))));
 	}
 };
 var get = (module, getScope) => {
@@ -133,7 +133,7 @@ __webpack_require__.d(exports, {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "react-module-1:";
+/******/ 	var dataWebpackPrefix = "react-module-2:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -206,7 +206,7 @@ __webpack_require__.d(exports, {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "react-module-1";
+/******/ 		var uniqueName = "react-module-2";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -385,14 +385,14 @@ __webpack_require__.d(exports, {
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
 /******/ 		9619: () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))))),
-/******/ 		4903: () => (loadStrictSingletonVersionCheckFallback("default", "styled-components", [4,5,3,5], () => (__webpack_require__.e(545).then(() => (() => (__webpack_require__(5545))))))),
-/******/ 		7515: () => (loadFallback("default", "@monorepo-nx-react-mfe/utils", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935)))))))
+/******/ 		7515: () => (loadFallback("default", "@monorepo-nx-react-mfe/utils", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935))))))),
+/******/ 		4903: () => (loadStrictSingletonVersionCheckFallback("default", "styled-components", [4,5,3,5], () => (__webpack_require__.e(545).then(() => (() => (__webpack_require__(5545)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"266": [
-/******/ 			4903,
-/******/ 			7515
+/******/ 		"311": [
+/******/ 			7515,
+/******/ 			4903
 /******/ 		],
 /******/ 		"619": [
 /******/ 			9619
@@ -435,7 +435,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		819: 0
+/******/ 		632: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -447,7 +447,7 @@ __webpack_require__.d(exports, {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(619 != chunkId) {
+/******/ 					if(!/^(311|619)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -512,7 +512,7 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkreact_module_1"] = self["webpackChunkreact_module_1"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkreact_module_2"] = self["webpackChunkreact_module_2"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
