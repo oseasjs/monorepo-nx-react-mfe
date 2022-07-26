@@ -9,12 +9,14 @@ on:
     paths:
       - 'apps/shell/**'
       - '.github/workflows/shell-build.yml'
+      - '.github/workflows/base-reusable-workflow.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'apps/shell/**'
       - '.github/workflows/shell-build.yml'
+      - '.github/workflows/base-reusable-workflow.yml'
 
 # Reusing github actions workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 jobs:

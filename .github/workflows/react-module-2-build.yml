@@ -9,12 +9,14 @@ on:
     paths:
       - 'apps/react-module-2/**'
       - '.github/workflows/react-module-2-build.yml'
+      - '.github/workflows/base-reusable-workflow.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'apps/react-module-2/**'
       - '.github/workflows/react-module-2-build.yml'
+      - '.github/workflows/base-reusable-workflow.yml'
 
 # Reusing github actions workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 jobs:
