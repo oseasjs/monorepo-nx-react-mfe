@@ -93,7 +93,7 @@ const App: React.FC = () => {
             {renderRoute({
               ...items[0],
               path: '*',
-              breadcrumbs: ['Menu', 'Home Updated'],
+              breadcrumbs: ['Menu', 'Home'],
             })}
             <>{items.map((item) => renderRoute(item))}</>
           </Routes>
