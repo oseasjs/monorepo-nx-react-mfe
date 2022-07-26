@@ -33,7 +33,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-${{ inputs.ui_module }}-${{ inputs.nx_configuration }}-build-ui-${{ hashFiles('./yarn.lock') }}
+          key: ${{ runner.os }}-${{ inputs.ui_module }}-${{ inputs.nx_configuration }}-build-${{ hashFiles('./yarn.lock') }}
 
       - name: Install dependencies
         run: yarn
@@ -54,5 +54,3 @@ jobs:
 
       # - name: Generate version TAG
       #   run: echo "TAG=$(git show -s --format=%cd --date=format:%Y%m%d%H%M%S)" >> $GITHUB_ENV
-
-  
