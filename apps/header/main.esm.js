@@ -1,39 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 8707:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 61871:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-var moduleMap = {
-	"./Module": () => {
-		return Promise.all([__webpack_require__.e(619), __webpack_require__.e(311), __webpack_require__.e(618)]).then(() => (() => ((__webpack_require__(5618)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope) => {
-	if (!__webpack_require__.S) return;
-	var name = "default"
-	var oldScope = __webpack_require__.S[name];
-	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
-	__webpack_require__.S[name] = shareScope;
-	return __webpack_require__.I(name, initScope);
-};
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
+Promise.all(/* import() */[__webpack_require__.e(619), __webpack_require__.e(135), __webpack_require__.e(882), __webpack_require__.e(899)]).then(__webpack_require__.bind(__webpack_require__, 78899));
 
 /***/ })
 
@@ -51,13 +21,16 @@ __webpack_require__.d(exports, {
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
 /******/ 	var module = __webpack_module_cache__[moduleId] = {
-/******/ 		// no module.id needed
-/******/ 		// no module.loaded needed
+/******/ 		id: moduleId,
+/******/ 		loaded: false,
 /******/ 		exports: {}
 /******/ 	};
 /******/ 
 /******/ 	// Execute the module function
-/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Flag the module as loaded
+/******/ 	module.loaded = true;
 /******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
@@ -133,7 +106,7 @@ __webpack_require__.d(exports, {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "react-module-2:";
+/******/ 	var dataWebpackPrefix = "header:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -187,6 +160,15 @@ __webpack_require__.d(exports, {
 /******/ 	};
 /******/ })();
 /******/ 
+/******/ /* webpack/runtime/node module decorator */
+/******/ (() => {
+/******/ 	__webpack_require__.nmd = (module) => {
+/******/ 		module.paths = [];
+/******/ 		if (!module.children) module.children = [];
+/******/ 		return module;
+/******/ 	};
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/sharing */
 /******/ (() => {
 /******/ 	__webpack_require__.S = {};
@@ -206,7 +188,7 @@ __webpack_require__.d(exports, {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "react-module-2";
+/******/ 		var uniqueName = "header";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -226,10 +208,11 @@ __webpack_require__.d(exports, {
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
-/******/ 				register("@monorepo-nx-react-mfe/utils", "0.0.1", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935))))));
-/******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e(316), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(8316))))));
+/******/ 				register("antd", "4.21.4", () => (Promise.all([__webpack_require__.e(726), __webpack_require__.e(619), __webpack_require__.e(135), __webpack_require__.e(709)]).then(() => (() => (__webpack_require__(88351))))));
+/******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e(316), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(28316))))));
+/******/ 				register("react-router-dom", "6.3.0", () => (Promise.all([__webpack_require__.e(806), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(32806))))));
 /******/ 				register("react", "18.2.0", () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))));
-/******/ 				register("styled-components", "5.3.5", () => (Promise.all([__webpack_require__.e(545), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(5545))))));
+/******/ 				register("styled-components", "5.3.5", () => (Promise.all([__webpack_require__.e(545), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(75545))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -384,18 +367,26 @@ __webpack_require__.d(exports, {
 /******/ 	});
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
-/******/ 		9619: () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))))),
-/******/ 		7515: () => (loadFallback("default", "@monorepo-nx-react-mfe/utils", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935))))))),
-/******/ 		4903: () => (loadStrictSingletonVersionCheckFallback("default", "styled-components", [4,5,3,5], () => (__webpack_require__.e(545).then(() => (() => (__webpack_require__(5545)))))))
+/******/ 		59619: () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))))),
+/******/ 		81135: () => (loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], () => (__webpack_require__.e(316).then(() => (() => (__webpack_require__(28316))))))),
+/******/ 		45493: () => (loadStrictSingletonVersionCheckFallback("default", "react-router-dom", [4,6,3,0], () => (__webpack_require__.e(806).then(() => (() => (__webpack_require__(32806))))))),
+/******/ 		58573: () => (loadStrictSingletonVersionCheckFallback("default", "antd", [1,4,21,3], () => (Promise.all([__webpack_require__.e(726), __webpack_require__.e(135), __webpack_require__.e(616)]).then(() => (() => (__webpack_require__(88351))))))),
+/******/ 		14903: () => (loadStrictSingletonVersionCheckFallback("default", "styled-components", [4,5,3,5], () => (__webpack_require__.e(545).then(() => (() => (__webpack_require__(75545)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"311": [
-/******/ 			7515,
-/******/ 			4903
+/******/ 		"135": [
+/******/ 			81135
 /******/ 		],
 /******/ 		"619": [
-/******/ 			9619
+/******/ 			59619
+/******/ 		],
+/******/ 		"882": [
+/******/ 			45493,
+/******/ 			58573
+/******/ 		],
+/******/ 		"899": [
+/******/ 			14903
 /******/ 		]
 /******/ 	};
 /******/ 	__webpack_require__.f.consumes = (chunkId, promises) => {
@@ -435,7 +426,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		632: 0
+/******/ 		179: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -447,7 +438,7 @@ __webpack_require__.d(exports, {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(!/^(311|619)$/.test(chunkId)) {
+/******/ 					if(!/^(135|619)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -512,9 +503,14 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkreact_module_2"] = self["webpackChunkreact_module_2"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkheader"] = self["webpackChunkheader"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/nonce */
+/******/ (() => {
+/******/ 	__webpack_require__.nc = undefined;
 /******/ })();
 /******/ 
 /************************************************************************/
@@ -522,8 +518,5 @@ __webpack_require__.d(exports, {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(8707);
-/******/ var __webpack_exports__get = __webpack_exports__.get;
-/******/ var __webpack_exports__init = __webpack_exports__.init;
-/******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
+/******/ var __webpack_exports__ = __webpack_require__(61871);
 /******/ 
