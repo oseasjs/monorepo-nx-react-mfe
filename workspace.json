@@ -1,5 +1,15 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "header": "apps/header",
+    "header-e2e": "apps/header-e2e",
+    "react-module-1": "apps/react-module-1",
+    "react-module-1-e2e": "apps/react-module-1-e2e",
+    "react-module-2": "apps/react-module-2",
+    "react-module-2-e2e": "apps/react-module-2-e2e",
+    "shell": "apps/shell",
+    "shell-e2e": "apps/shell-e2e",
+    "utils": "libs/utils"
+  }
 }
