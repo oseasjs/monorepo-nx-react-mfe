@@ -1,4 +1,4 @@
-(self["webpackChunkshell"] = self["webpackChunkshell"] || []).push([[726],{
+(self["webpackChunkheader"] = self["webpackChunkheader"] || []).push([[726],{
 
 /***/ 88351:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -15228,7 +15228,7 @@ function _wrapNativeSuper(Class) {
 var formatRegExp = /%[sdj%]/g;
 var dist_web_warning = function warning() {}; // don't print warning message when in production env or node runtime
 
-if (typeof process !== 'undefined' && ({"NODE_ENV":"production","NX_MFE_HEADER_URL":"http://localhost:8091/header","NX_MFE_REACT_MODULE_URL":"http://localhost:8091/react-module","NX_MFE_REACT_MODULE_1_URL":"http://localhost:8091/react-module-1","NX_MFE_REACT_MODULE_2_URL":"http://localhost:8091/react-module-2","NX_MFE_REACT_MODULE_3_URL":"http://localhost:8091/react-module-3","NX_CLI_SET":"true","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/oseas/work/pocs/monorepo-nx-react-mfe","NX_TERMINAL_OUTPUT_PATH":"/Users/oseas/work/pocs/monorepo-nx-react-mfe/node_modules/.cache/nx/terminalOutputs/77394c475441eea5ab1e793648da5678350781bc92cbf9850cd4376756b40fc3","NX_STREAM_OUTPUT":"true","NX_TASK_TARGET_PROJECT":"shell","NX_TASK_HASH":"77394c475441eea5ab1e793648da5678350781bc92cbf9850cd4376756b40fc3"}) && "production" !== 'production' && 0 && 0) {}
+if (typeof process !== 'undefined' && ({"NODE_ENV":"production","NX_CLI_SET":"true","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/oseas/work/pocs/monorepo-nx-react-mfe","NX_TERMINAL_OUTPUT_PATH":"/Users/oseas/work/pocs/monorepo-nx-react-mfe/node_modules/.cache/nx/terminalOutputs/513ff93439490c315fd121c97dda1fcb108dfb996a9cec5635b44cfe3abba540","NX_TASK_TARGET_PROJECT":"header","NX_TASK_HASH":"513ff93439490c315fd121c97dda1fcb108dfb996a9cec5635b44cfe3abba540"}) && "production" !== 'production' && 0 && 0) {}
 
 function convertFieldsError(errors) {
   if (!errors || !errors.length) return null;

@@ -1,85 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 22631:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ 1871:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-
-;// CONCATENATED MODULE: ./src/environments/environment.qa.ts
-const environment = {
-  env: 'qa',
-  remotes: {
-    header: "http://localhost:8091/header",
-    'react-module-1': "http://localhost:8091/react-module-1",
-    'react-module-2': "http://localhost:8091/react-module-2"
-  }
-};
-// EXTERNAL MODULE: ./src/utils/dynamic-mfe.ts
-var dynamic_mfe = __webpack_require__(43091);
-;// CONCATENATED MODULE: ./src/main.ts
-
-
-Promise.resolve((0,dynamic_mfe/* setRemoteDefinitions */.Gz)(environment.remotes)).then(() => Promise.all(/* import() */[__webpack_require__.e(619), __webpack_require__.e(135), __webpack_require__.e(608)]).then(__webpack_require__.bind(__webpack_require__, 14608))).catch(err => console.log('error loading app', err));
-
-/***/ }),
-
-/***/ 43091:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Gz": () => (/* binding */ setRemoteDefinitions),
-/* harmony export */   "Vs": () => (/* binding */ loadRemoteModule)
-/* harmony export */ });
-/* unused harmony exports setRemoteUrlResolver, loadRemoteContainer */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-let remoteUrlDefinitions;
-let resolveRemoteUrl;
-const remoteModuleMap = new Map();
-const remoteContainerMap = new Map();
-let initialSharingScopeCreated = false;
-const setRemoteDefinitions = definitions => {
-  remoteUrlDefinitions = definitions;
-};
-const setRemoteUrlResolver = remoteUrl => {
-  resolveRemoteUrl = remoteUrl;
-};
-
-const loadModule = async url => Promise.resolve(url).then(() => import(
-/* webpackIgnore:true */
-url));
-
-const loadRemoteContainer = async remoteName => {
-  if (!resolveRemoteUrl && !remoteUrlDefinitions) {
-    throw new Error('Call setRemoteDefinitions or setRemoteUrlResolver to allow Dynamic Federation to find the remote apps correctly.');
-  }
-
-  if (!initialSharingScopeCreated) {
-    initialSharingScopeCreated = true; //@ts-ignore
-
-    await __webpack_require__.I('default');
-  }
-
-  const remoteUrl = remoteUrlDefinitions[remoteName];
-  const containerUrl = `${remoteUrl}${remoteUrl.endsWith('/') ? '' : '/'}remoteEntry.js`;
-  const container = await loadModule(containerUrl); //@ts-ignore
-
-  await container.init(__webpack_require__.S.default);
-  remoteContainerMap.set(remoteName, container);
-  return container;
-};
-const loadRemoteModule = async (remoteName, moduleName) => {
-  const remoteModuleKey = `${remoteName}:${moduleName}`;
-
-  if (remoteModuleMap.has(remoteModuleKey)) {
-    return remoteModuleMap.get(remoteModuleKey);
-  }
-
-  const container = remoteContainerMap.has(remoteName) ? remoteContainerMap.get(remoteName) : await loadRemoteContainer(remoteName); //@ts-ignore
-
-  const factory = await container.get(moduleName);
-  const Module = factory();
-  remoteModuleMap.set(remoteModuleKey, Module);
-  return Module;
-};
+Promise.all(/* import() */[__webpack_require__.e(619), __webpack_require__.e(311), __webpack_require__.e(899)]).then(__webpack_require__.bind(__webpack_require__, 8899));
 
 /***/ })
 
@@ -97,16 +21,13 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
 /******/ 	var module = __webpack_module_cache__[moduleId] = {
-/******/ 		id: moduleId,
-/******/ 		loaded: false,
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
 /******/ 		exports: {}
 /******/ 	};
 /******/ 
 /******/ 	// Execute the module function
-/******/ 	__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 
-/******/ 	// Flag the module as loaded
-/******/ 	module.loaded = true;
+/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
@@ -161,7 +82,7 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + chunkId + "." + {"135":"fe4f7f24d4d97780","316":"cc23e3d1c59b8dbc","589":"5d2e6ba82f1085b1","608":"2076679fddb74e91","616":"9aa4986686e4c35f","619":"25b42692a105d1f5","709":"2168cbad923acce3","726":"462d85ce9d2453eb","784":"1955e77ca4a79d89","806":"6fa4313af8127752","850":"eb99d77d3aafa2ec","935":"358ee53185005204"}[chunkId] + ".esm.js";
+/******/ 		return "" + chunkId + "." + {"311":"7a1b45512651d1fc","316":"899c347ab5641936","545":"a69c06f5fed8f2f9","619":"03262a6f6b7f176d","784":"80e0d121ed6ff419","899":"23feb5f49926caae","935":"1a96941f8b0e7972"}[chunkId] + ".esm.js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -182,7 +103,7 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "shell:";
+/******/ 	var dataWebpackPrefix = "react-module-2:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -236,15 +157,6 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	};
 /******/ })();
 /******/ 
-/******/ /* webpack/runtime/node module decorator */
-/******/ (() => {
-/******/ 	__webpack_require__.nmd = (module) => {
-/******/ 		module.paths = [];
-/******/ 		if (!module.children) module.children = [];
-/******/ 		return module;
-/******/ 	};
-/******/ })();
-/******/ 
 /******/ /* webpack/runtime/sharing */
 /******/ (() => {
 /******/ 	__webpack_require__.S = {};
@@ -264,7 +176,7 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "shell";
+/******/ 		var uniqueName = "react-module-2";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -284,12 +196,10 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
-/******/ 				register("@monorepo-nx-react-mfe/utils", "0.0.1", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(16935))))));
-/******/ 				register("antd", "4.21.4", () => (Promise.all([__webpack_require__.e(726), __webpack_require__.e(619), __webpack_require__.e(135), __webpack_require__.e(709)]).then(() => (() => (__webpack_require__(88351))))));
-/******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e(316), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(28316))))));
-/******/ 				register("react-error-boundary", "3.1.4", () => (Promise.all([__webpack_require__.e(619), __webpack_require__.e(850)]).then(() => (() => (__webpack_require__(80589))))));
-/******/ 				register("react-router-dom", "6.3.0", () => (Promise.all([__webpack_require__.e(806), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(32806))))));
+/******/ 				register("@monorepo-nx-react-mfe/utils", "0.0.1", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935))))));
+/******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e(316), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(8316))))));
 /******/ 				register("react", "18.2.0", () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))));
+/******/ 				register("styled-components", "5.3.5", () => (Promise.all([__webpack_require__.e(545), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(5545))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -444,26 +354,22 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	});
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
-/******/ 		59619: () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))))),
-/******/ 		81135: () => (loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], () => (__webpack_require__.e(316).then(() => (() => (__webpack_require__(28316))))))),
-/******/ 		45493: () => (loadStrictSingletonVersionCheckFallback("default", "react-router-dom", [4,6,3,0], () => (__webpack_require__.e(806).then(() => (() => (__webpack_require__(32806))))))),
-/******/ 		58573: () => (loadStrictSingletonVersionCheckFallback("default", "antd", [1,4,21,3], () => (Promise.all([__webpack_require__.e(726), __webpack_require__.e(616)]).then(() => (() => (__webpack_require__(88351))))))),
-/******/ 		65008: () => (loadStrictSingletonVersionCheckFallback("default", "react-error-boundary", [1,3,1,4], () => (__webpack_require__.e(589).then(() => (() => (__webpack_require__(80589))))))),
-/******/ 		77515: () => (loadFallback("default", "@monorepo-nx-react-mfe/utils", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(16935)))))))
+/******/ 		9619: () => (loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))))),
+/******/ 		4903: () => (loadStrictSingletonVersionCheckFallback("default", "styled-components", [4,5,3,5], () => (__webpack_require__.e(545).then(() => (() => (__webpack_require__(5545))))))),
+/******/ 		7515: () => (loadFallback("default", "@monorepo-nx-react-mfe/utils", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(6935))))))),
+/******/ 		1135: () => (loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], () => (__webpack_require__.e(316).then(() => (() => (__webpack_require__(8316)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"135": [
-/******/ 			81135
-/******/ 		],
-/******/ 		"608": [
-/******/ 			45493,
-/******/ 			58573,
-/******/ 			65008,
-/******/ 			77515
+/******/ 		"311": [
+/******/ 			4903,
+/******/ 			7515
 /******/ 		],
 /******/ 		"619": [
-/******/ 			59619
+/******/ 			9619
+/******/ 		],
+/******/ 		"899": [
+/******/ 			1135
 /******/ 		]
 /******/ 	};
 /******/ 	__webpack_require__.f.consumes = (chunkId, promises) => {
@@ -515,7 +421,7 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(!/^(135|619)$/.test(chunkId)) {
+/******/ 					if(!/^(311|619)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -580,14 +486,9 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkshell"] = self["webpackChunkshell"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkreact_module_2"] = self["webpackChunkreact_module_2"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ })();
-/******/ 
-/******/ /* webpack/runtime/nonce */
-/******/ (() => {
-/******/ 	__webpack_require__.nc = undefined;
 /******/ })();
 /******/ 
 /************************************************************************/
@@ -595,5 +496,5 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(22631);
+/******/ var __webpack_exports__ = __webpack_require__(1871);
 /******/ 
