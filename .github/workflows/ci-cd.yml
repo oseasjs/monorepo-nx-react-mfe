@@ -42,7 +42,7 @@ jobs:
       #   run: yarn nx lint ${{ inputs.ui_module }}
 
       - name: Build
-        run: yarn nx build --all --configuration=qa --skip-nx-cache
+        run: yarn nx run-many --target=build --all --configuration=qa --skip-nx-cache
 
       - name: Deploy on GH-PAGES
         uses: JamesIves/github-pages-deploy-action@v4
