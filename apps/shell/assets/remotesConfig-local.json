@@ -1,0 +1,9 @@
+{
+  "remotes": {
+    "header": "http://localhost:8081",
+    "react-module-1": "http://localhost:8082",
+    "react-module-2": "http://localhost:8083",
+    "react-module-3": "http://localhost:8084",
+    "react-module": "http://localhost:8085"
+  }
+}

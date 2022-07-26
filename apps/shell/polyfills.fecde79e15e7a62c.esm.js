@@ -10305,7 +10305,7 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + chunkId + ".esm.js";
+/******/ 		return "" + chunkId + "." + {"135":"ef96a74d92fe789e","316":"cc23e3d1c59b8dbc","619":"950c7097dce4ab9e","709":"2168cbad923acce3","726":"367f561d8a3ef011","784":"1955e77ca4a79d89","806":"6fa4313af8127752","850":"eb99d77d3aafa2ec","935":"358ee53185005204"}[chunkId] + ".esm.js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -10326,7 +10326,7 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "header:";
+/******/ 	var dataWebpackPrefix = "shell:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -10408,7 +10408,7 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "header";
+/******/ 		var uniqueName = "shell";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -10428,11 +10428,12 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 /******/ 		var promises = [];
 /******/ 		switch(name) {
 /******/ 			case "default": {
+/******/ 				register("@monorepo-nx-react-mfe/utils", "0.0.1", () => (__webpack_require__.e(935).then(() => (() => (__webpack_require__(16935))))));
 /******/ 				register("antd", "4.21.4", () => (Promise.all([__webpack_require__.e(726), __webpack_require__.e(619), __webpack_require__.e(135), __webpack_require__.e(709)]).then(() => (() => (__webpack_require__(88351))))));
 /******/ 				register("react-dom", "18.2.0", () => (Promise.all([__webpack_require__.e(316), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(28316))))));
+/******/ 				register("react-error-boundary", "3.1.4", () => (Promise.all([__webpack_require__.e(619), __webpack_require__.e(850)]).then(() => (() => (__webpack_require__(80589))))));
 /******/ 				register("react-router-dom", "6.3.0", () => (Promise.all([__webpack_require__.e(806), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(32806))))));
 /******/ 				register("react", "18.2.0", () => (__webpack_require__.e(784).then(() => (() => (__webpack_require__(2784))))));
-/******/ 				register("styled-components", "5.3.5", () => (Promise.all([__webpack_require__.e(545), __webpack_require__.e(619)]).then(() => (() => (__webpack_require__(75545))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -10713,7 +10714,7 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkheader"] = self["webpackChunkheader"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkshell"] = self["webpackChunkshell"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
