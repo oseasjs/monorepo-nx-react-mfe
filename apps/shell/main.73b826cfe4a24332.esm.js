@@ -8,9 +8,9 @@
 const environment = {
   env: 'qa',
   remotes: {
-    'header': 'https://raw.githubusercontent.com/oseasjs/monorepo-nx-react-mfe/gh-pages/apps/header',
-    'react-module-1': 'https://raw.githubusercontent.com/oseasjs/monorepo-nx-react-mfe/gh-pages/apps/react-module-1',
-    'react-module-2': 'https://raw.githubusercontent.com/oseasjs/monorepo-nx-react-mfe/gh-pages/apps/react-module-2'
+    'header': 'https://oseasjs.github.io/monorepo-nx-react-mfe/apps/header',
+    'react-module-1': 'https://oseasjs.github.io/monorepo-nx-react-mfe/apps/react-module-1',
+    'react-module-2': 'https://oseasjs.github.io/monorepo-nx-react-mfe/apps/react-module-2'
   }
 };
 // EXTERNAL MODULE: ./src/utils/dynamic-mfe.ts
@@ -161,7 +161,7 @@ const loadRemoteModule = async (remoteName, moduleName) => {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + chunkId + "." + {"135":"fe4f7f24d4d97780","316":"cc23e3d1c59b8dbc","589":"5d2e6ba82f1085b1","608":"2076679fddb74e91","616":"9aa4986686e4c35f","619":"25b42692a105d1f5","709":"2168cbad923acce3","726":"70144d3e318fe880","784":"1955e77ca4a79d89","806":"6fa4313af8127752","850":"eb99d77d3aafa2ec","935":"358ee53185005204"}[chunkId] + ".esm.js";
+/******/ 		return "" + chunkId + "." + {"135":"fe4f7f24d4d97780","316":"cc23e3d1c59b8dbc","589":"5d2e6ba82f1085b1","608":"2076679fddb74e91","616":"9aa4986686e4c35f","619":"25b42692a105d1f5","709":"2168cbad923acce3","726":"eba551dfe2e9ad2e","784":"1955e77ca4a79d89","806":"6fa4313af8127752","850":"eb99d77d3aafa2ec","935":"358ee53185005204"}[chunkId] + ".esm.js";
 /******/ 	};
 /******/ })();
 /******/ 
