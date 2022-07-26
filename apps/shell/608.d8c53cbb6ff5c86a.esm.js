@@ -161,7 +161,7 @@ const App = () => {
         children: /*#__PURE__*/(0,jsx_runtime.jsxs)(react_router_dom_index_js_.Routes, {
           children: [renderRoute(Object.assign({}, items[0], {
             path: '*',
-            breadcrumbs: ['Menu', 'Home Updated']
+            breadcrumbs: ['Menu', 'Home']
           })), /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
             children: items.map(item => renderRoute(item))
           })]
