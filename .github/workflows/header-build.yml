@@ -1,4 +1,4 @@
-name: Header UI - Build
+name: Header - Build
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
             echo "NX_CONFIGURATION=qa" >> $GITHUB_ENV 
           fi
 
-  ui-build:
+  build:
     name: Header UI
     needs: ['set-env-vars']
     uses: ./.github/workflows/base-reusable-workflow.yml

@@ -1,20 +1,20 @@
-name: Shell - Build
+name: React Module 1 - Build
 
 on:
   push:
     tags:
-      - 'v*-shell-prod*'
+      - 'v*-react-module-1-prod*'
     branches:
       - main
     paths:
-      - 'apps/shell/**'
-      - '.github/workflows/shell-build.yml'
+      - 'apps/react-module-1/**'
+      - '.github/workflows/react-module-1-build.yml'
   pull_request:
     branches:
       - main
     paths:
-      - 'apps/shell/**'
-      - '.github/workflows/shell-build.yml'
+      - 'apps/react-module-1/**'
+      - '.github/workflows/react-module-1-build.yml'
 
 # Reusing github actions workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 jobs:
@@ -33,9 +33,9 @@ jobs:
           fi
 
   build:
-    name: Shell UI
+    name: Header UI
     needs: ['set-env-vars']
     uses: ./.github/workflows/base-reusable-workflow.yml
     with:
-      ui_module: shell
+      ui_module: react-module-1
       nx_configuration: ${{ needs.set-env-vars.outputs.nx-configuration }}
