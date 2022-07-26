@@ -34,7 +34,7 @@ jobs:
   shell-ui-build:
     name: Shell UI
     needs: ['set-env-vars']
-    uses: ./.github/workflows/base-ui-build-deploy.yml
+    uses: ./.github/workflows/base-reusable-workflow.yml
     with:
       ui_module: shell
       nx_configuration: ${{ needs.set-env-vars.outputs.nx-configuration }}
