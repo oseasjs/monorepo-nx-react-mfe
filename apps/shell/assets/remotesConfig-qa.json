@@ -1,0 +1,7 @@
+{
+  "remotes": {
+    "header": "http://localhost:8091/header/v.1",
+    "react-module-1": "http://localhost:8091/react-module-1/v.1",
+    "react-module-2": "http://localhost:8091/react-module-2/c.2"
+  }
+}
