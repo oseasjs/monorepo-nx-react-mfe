@@ -1,20 +1,20 @@
-name: Shell UI - Build
+name: Header UI - Build
 
 on:
   push:
     tags:
-      - 'v*-shell-prod*'
+      - 'v*-header-prod*'
     branches:
       - main
     paths:
-      - 'apps/shell/**'
-      - '.github/workflows/shell-build.yml'
+      - 'apps/header/**'
+      - '.github/workflows/header-build.yml'
   pull_request:
     branches:
       - main
     paths:
-      - 'apps/shell/**'
-      - '.github/workflows/shell-build.yml'
+      - 'apps/header/**'
+      - '.github/workflows/header-build.yml'
 
 # Reusing github actions workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 jobs:
@@ -33,9 +33,9 @@ jobs:
           fi
 
   ui-build:
-    name: Shell UI
+    name: Header UI
     needs: ['set-env-vars']
     uses: ./.github/workflows/base-reusable-workflow.yml
     with:
-      ui_module: shell
+      ui_module: header
       nx_configuration: ${{ needs.set-env-vars.outputs.nx-configuration }}
