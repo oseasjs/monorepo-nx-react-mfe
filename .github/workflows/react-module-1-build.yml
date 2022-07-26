@@ -5,7 +5,7 @@ on:
     tags:
       - 'v*-react-module-1-prod*'
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/react-module-1/**'
       - '.github/workflows/react-module-1-build.yml'
@@ -13,7 +13,7 @@ on:
 
   pull_request:
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/react-module-1/**'
       - '.github/workflows/react-module-1-build.yml'

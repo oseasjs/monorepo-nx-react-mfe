@@ -5,14 +5,14 @@ on:
     tags:
       - 'v*-header-prod*'
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/header/**'
       - '.github/workflows/header-build.yml'
       - '.github/workflows/base-reusable-workflow.yml'
   pull_request:
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/header/**'
       - '.github/workflows/header-build.yml'

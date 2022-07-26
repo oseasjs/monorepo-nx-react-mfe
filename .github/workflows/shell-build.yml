@@ -5,14 +5,14 @@ on:
     tags:
       - 'v*-shell-prod*'
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/shell/**'
       - '.github/workflows/shell-build.yml'
       - '.github/workflows/base-reusable-workflow.yml'
   pull_request:
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/shell/**'
       - '.github/workflows/shell-build.yml'

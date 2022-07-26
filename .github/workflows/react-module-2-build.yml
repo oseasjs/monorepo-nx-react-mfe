@@ -5,14 +5,14 @@ on:
     tags:
       - 'v*-react-module-2-prod*'
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/react-module-2/**'
       - '.github/workflows/react-module-2-build.yml'
       - '.github/workflows/base-reusable-workflow.yml'
   pull_request:
     branches:
-      - main
+      - main-old
     paths:
       - 'apps/react-module-2/**'
       - '.github/workflows/react-module-2-build.yml'
