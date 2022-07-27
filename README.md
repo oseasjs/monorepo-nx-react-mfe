@@ -2,8 +2,8 @@
 
 ### Build Branches Status
 
-| Branch |                                           Build                                            |                                                                                                                                                       Coverage |
-| ------ | :----------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Branch |                                                      Build                                                       |                                                                                                                                                       Coverage |
+| ------ | :--------------------------------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Main   | ![Build & Deploy](https://github.com/oseasjs/monorepo-nx-react-mfe/workflows/build_deploy/badge.svg?branch=main) | [![codecov](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main/graph/badge.svg)](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main) |
 
 ## This project was bootstrapped with:
@@ -13,6 +13,7 @@
 - [NX](https://nx.dev/getting-started/intro);
 - [Node](https://nodejs.org/en/docs/);
 - [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html);
+- [Typescript](https://www.typescriptlang.org/docs/);
 - [Webpack 5](https://webpack.js.org/concepts/);
 - [Module Federation](https://webpack.js.org/concepts/module-federation/);
 - [Github Actions](https://docs.github.com/pt/actions);
