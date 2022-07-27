@@ -15228,7 +15228,7 @@ function _wrapNativeSuper(Class) {
 var formatRegExp = /%[sdj%]/g;
 var dist_web_warning = function warning() {}; // don't print warning message when in production env or node runtime
 
-if (typeof process !== 'undefined' && ({"NODE_ENV":"production","NX_CLI_SET":"true","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/home/runner/work/monorepo-nx-react-mfe/monorepo-nx-react-mfe","NX_SKIP_NX_CACHE":"true","NX_TERMINAL_OUTPUT_PATH":"/home/runner/work/monorepo-nx-react-mfe/monorepo-nx-react-mfe/node_modules/.cache/nx/terminalOutputs/27db486cfa5cefc905c606ba16378a22741b6486c1bf74ce35bc423d7c5899f6","NX_TASK_TARGET_PROJECT":"shell","NX_TASK_HASH":"27db486cfa5cefc905c606ba16378a22741b6486c1bf74ce35bc423d7c5899f6"}) && "production" !== 'production' && 0 && 0) {}
+if (typeof process !== 'undefined' && ({"NODE_ENV":"production","NX_CLI_SET":"true","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/home/runner/work/monorepo-nx-react-mfe/monorepo-nx-react-mfe","NX_SKIP_NX_CACHE":"true","NX_TERMINAL_OUTPUT_PATH":"/home/runner/work/monorepo-nx-react-mfe/monorepo-nx-react-mfe/node_modules/.cache/nx/terminalOutputs/8b24c29d426633281d2c4751330f5d8358b6c6ae2d149b4876de19fccfe486d1","NX_TASK_TARGET_PROJECT":"shell","NX_TASK_HASH":"8b24c29d426633281d2c4751330f5d8358b6c6ae2d149b4876de19fccfe486d1"}) && "production" !== 'production' && 0 && 0) {}
 
 function convertFieldsError(errors) {
   if (!errors || !errors.length) return null;
