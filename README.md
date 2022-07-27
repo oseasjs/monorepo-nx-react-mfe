@@ -4,7 +4,7 @@
 
 | Branch |                                           Build                                            |                                                                                                                                                       Coverage |
 | ------ | :----------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Main   | ![CI](https://github.com/oseasjs/monorepo-nx-react-mfe/workflows/CI/badge.svg?branch=main) | [![codecov](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main/graph/badge.svg)](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main) |
+| Main   | ![Build & Deploy](https://github.com/oseasjs/monorepo-nx-react-mfe/workflows/Build & Deploy/badge.svg?branch=main) | [![codecov](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main/graph/badge.svg)](https://codecov.io/gh/oseasjs/monorepo-nx-react-mfe/branch/main) |
 
 ## This project was bootstrapped with:
 
